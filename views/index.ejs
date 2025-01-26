@@ -149,9 +149,11 @@
           To download my resume, click the button below:
           <div class="download-button-container">
             <!-- Update the download link to point to /images/harshresume.png -->
-            <a href="/public/harshresume.png" id="downloadLink" download="Harsh_Darji_Resume.pdf">
-              <button class="download-button">Download Resume</button>
-            </a>
+            <a href="https://drive.google.com/file/d/1-2Jh_R6V1QvX_a2HmcCuXjD0iJlD1-Rp/view?usp=sharing" id="downloadLink" download="Harsh_Darji_Resume.pdf" aria-label="Download Harsh Darji's Resume">
+              <button class="download-button" onclick="downloadResume()">Download Resume</button>
+          </a>
+
+          
           </div>
         </div>
       
@@ -174,5 +176,15 @@
     </section>
   </main>
   
+  <script>
+    function downloadResume() {
+        // Get the download link
+        const link = document.getElementById("downloadLink");
+
+        // Trigger the download by clicking the link
+        link.click();
+    }
+</script>
+
 </body>
 </html>
