@@ -14,9 +14,6 @@ const PORT = process.env.PORT || 3001;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Set EJS as the view engine
-app.set('view engine', 'ejs');
-
 // Serve static files (CSS, images, etc.)
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -44,7 +41,7 @@ const Message = mongoose.model('Message', messageSchema);
 
 // Route for the homepage
 app.get('/', (req, res) => {
-  res.render('index', { headshot: '/images/harsh.jpg' }); // Pass the headshot path to EJS
+  res.sendFile(path.join(__dirname, 'index.html')); // Serve the index.html file directly
 });
 
 // Route to handle form submission

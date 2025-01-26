@@ -6,7 +6,11 @@
   <title>HARSH DARJI</title>
   
   <!-- Link to the CSS file -->
-  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link rel="stylesheet" type="text/css" href="/public/styles.css">
+  <style>
+    /* Basic styling for the new section */
+
+  </style>
 </head>
 <body>
 
@@ -53,6 +57,11 @@
             <span>Skills</span>
           </a>
           
+          <a href="#projects">
+            <i class="fa-solid fa-laptop-code"></i>
+            <span>Projects</span>
+          </a>
+          
           <a href="#testimony">
             <i class="fa-solid fa-pen"></i>
             <span>Testimony</span>
@@ -66,7 +75,7 @@
       </div>
 
       <div class="headshot">
-        <img src="/harsh.jpg" alt="Harsh's headshot">
+        <img src="/public/harsh.jpg" alt="Harsh's headshot">
       </div>
     </section>
 
@@ -112,13 +121,54 @@
       </div>
     </section>
 
-    <!-- SECTION 3: Testimony -->
+    <!-- SECTION 3: Projects -->
+   <!-- SECTION 3: Projects -->
+<section id="projects" class="projects-section">
+  <h2>My Projects</h2>
+  <div class="project-cells">
+    <!-- Project 1 -->
+    <div class="project-cell">
+      <img src="/public/e-commerce.png" alt="Project 1">
+      <div class="project-text">
+        <h3>E-commerce site </h3>
+        <p>e-commerce website built with Node.js, Express, and MySQL a seamless shopping experience with responsive design, product management.
+        </p>
+        <a href="https://github.com/HARSHDARJI121/E-commerce-website-responsive" target="_blank">View Project</a>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-cell">
+      <img src="/public/Crudoperations.png" alt="Project 2">
+      <div class="project-text">
+        <h3>Crud Operations</h3>
+        <p>The client-side CRUD operations allow users to manage their cart by adding, updating, and deleting items, ensuring a smooth and customizable shopping experience.</p>
+        <a href="https://github.com/HARSHDARJI121/crud_operations" target="_blank">View Project</a>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-cell">
+      <img src="/public/Instagram clone.png" alt="Project 3">
+      <div class="project-text">
+        <h3>Project Title 3</h3>
+        <p>An Instagram clone built with the MERN stack, featuring user profiles, photo uploads, and real-time interactions, providing a social media experience.</p>
+        <a href="https://github.com/HARSHDARJI121/instagram-clone" target="_blank">View Project</a>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+<br>
+<br>
+
+    <!-- SECTION 4: Testimony -->
     <section id="testimony" class="testimony-section">
       <h2>Testimony</h2>
 
       <div class="group">
         <div class="person-details">
-          <img src="/harsh.jpg" alt="Harsh's headshot">
+          <img src="/public/harsh.jpg" alt="Harsh's headshot">
 
           <p>Harsh</p>
           <p>Front-end Developer | Computer Science | Currently studying at Thakur Ramnarayan College of Arts and Commerce, Dahisar East</p>
@@ -131,7 +181,7 @@
       </div>
     </section>
 
-    <!-- SECTION 4: Contact -->
+    <!-- SECTION 5: Contact -->
     <section id="contact" class="contact-section">
       <h2>Contact</h2>
 
@@ -148,17 +198,19 @@
           <br><br>
           To download my resume, click the button below:
           <div class="download-button-container">
-            <!-- Update the download link to point to /images/harshresume.png -->
             <a href="https://drive.google.com/file/d/1-2Jh_R6V1QvX_a2HmcCuXjD0iJlD1-Rp/view?usp=sharing" id="downloadLink" download="Harsh_Darji_Resume.pdf" aria-label="Download Harsh Darji's Resume">
               <button class="download-button" onclick="downloadResume()">Download Resume</button>
-          </a>
-
-          
+            </a>
+            <br>
+            <br>
+            <h1>Harsh Darji</h1>
+            <h4>Email: darjiharsh2005@gmail.com</h4>
+            <h4>Phone: +91 7400356323</h4>
+            <h4>Address: Meraroad Shanti Nagar, Mumbai, Maharashtra, India</h4>
+            <br />
           </div>
         </div>
       
-           
-
         <form action="/submit" method="POST">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required>
@@ -171,20 +223,16 @@
         
           <button type="submit">Send Message</button>
         </form>
-        
       </div>
     </section>
   </main>
   
   <script>
     function downloadResume() {
-        // Get the download link
         const link = document.getElementById("downloadLink");
-
-        // Trigger the download by clicking the link
         link.click();
     }
-</script>
+  </script>
 
 </body>
 </html>
