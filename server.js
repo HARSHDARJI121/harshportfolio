@@ -41,7 +41,7 @@ const Message = mongoose.model('Message', messageSchema);
 
 // Route for the homepage
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html')); // Serve the index.html file directly
+  res.render('index.html')
 });
 
 // Route to handle form submission
