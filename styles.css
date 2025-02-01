@@ -488,12 +488,23 @@ nav .right a:hover {
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
-  .links i {
-    margin: auto;
-    gap: 10px;
-    padding-top: 40px;
-    transition: padding-top 0.3s ease; /* Smooth transition for icon padding */
-  }
+  .links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px; /* Space between grid items */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: fit-content; /* Adjust width according to content */
+    margin: auto; /* Centering */
+}
+
+.links i {
+    margin-top: 10px;
+    position: relative;
+    font-size: 10px; /* Adjust icon size */
+}
+
 
   nav .right a span {
     display: none;
